@@ -2,8 +2,7 @@ import { Bot, webhookCallback } from "grammy";
 
 require('dotenv').config();
 
-// const token = process.env.BOT_TOKEN;
-const token =  "5343977261:AAHalKoXdVAWsqXROOZcxCQ01eHFRNTOuE8"
+const token = process.env.BOT_TOKEN;
 
 if (!token) throw new Error("BOT_TOKEN is unset");
 
