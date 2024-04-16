@@ -17,16 +17,16 @@ bot.command("test", async (ctx) => {
 });
 
 bot.on("message", async (ctx) => {
-    const message = ctx.message; // the message object
+    const message = ctx.message;
     ctx.reply(message?.text + '')
 });
 
 
-// export const config = {
-//     runtime: "edge",
-// };
-// export default webhookCallback(bot, "std/http");
+export const config = {
+    runtime: "edge",
+};
+export default webhookCallback(bot, "std/http");
     
-bot.start();
+// bot.start();
 
-export default bot
+// export default bot
