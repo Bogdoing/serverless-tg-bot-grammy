@@ -16,14 +16,16 @@ bot.command("test", async (ctx) => {
     ctx.reply("Got another message! /test")
 });
 
-bot.on("message", (ctx) => {
+bot.on("message", async (ctx) => {
     const message = ctx.message; // the message object
     ctx.reply(message?.text + '')
 });
 
-bot.start();
 
 // export const config = {
 //     runtime: "edge",
 // };
+// export default webhookCallback(bot, "std/http");
 export default webhookCallback(bot, "std/http");
+    
+bot.start();

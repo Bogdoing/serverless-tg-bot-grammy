@@ -12,12 +12,13 @@ bot.command("start", async (ctx) => {
 bot.command("test", async (ctx) => {
     ctx.reply("Got another message! /test");
 });
-bot.on("message", (ctx) => {
+bot.on("message", async (ctx) => {
     const message = ctx.message; // the message object
     ctx.reply((message === null || message === void 0 ? void 0 : message.text) + '');
 });
-bot.start();
 // export const config = {
 //     runtime: "edge",
 // };
+// export default webhookCallback(bot, "std/http");
 exports.default = (0, grammy_1.webhookCallback)(bot, "std/http");
+bot.start();
