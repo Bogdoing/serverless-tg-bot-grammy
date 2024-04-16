@@ -5,26 +5,6 @@ require('dotenv').config();
 const token = process.env.BOT_TOKEN;
 if (!token)
     throw new Error("BOT_TOKEN is unset");
-// const bot = new Bot(token);
-const bot = new grammy_1.Bot(token, {
-    client: {
-        // We accept the drawback of webhook replies for typing status.
-        canUseWebhookReply: (method) => method === "start",
-    },
-});
-bot.command("start", async (ctx) => {
-    ctx.reply("Got another message! /start");
-});
-bot.command("test", async (ctx) => {
-    ctx.reply("Got another message! /test");
-});
-bot.on("message", async (ctx) => {
-    const message = ctx.message;
-    ctx.reply((message === null || message === void 0 ? void 0 : message.text) + '');
-});
-// export const config = {
-//     runtime: "edge",
-// };
-exports.default = (0, grammy_1.webhookCallback)(bot, "std/http");
-// bot.start();
-// export default bot
+const bot = new grammy_1.Bot(token);
+bot.command("start", (ctx) => ctx.reply("I'm running on Heroku using long polling!"));
+bot.start();
