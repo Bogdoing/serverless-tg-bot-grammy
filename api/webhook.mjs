@@ -1,4 +1,4 @@
-import { bot } from "../src/bot"
+import { bot } from "../src/bot.mjs"
 import { webhookCallback } from 'grammy'
 
 export const config = { runtime: 'edge' }

@@ -2,8 +2,8 @@
   "scripts": {
     "start": "node build/bot.js",
     "dev": "nodemon api/bot.ts",
-    "test": "nodemon api/webhook.ts",
-    "build": "tsc",
+    "test": "nodemon api/webhook.mjs",
+    "build": "node api/webhook.mjs",
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {

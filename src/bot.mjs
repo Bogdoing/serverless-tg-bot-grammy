@@ -1,6 +1,6 @@
 import { Bot } from 'grammy'
-
-require('dotenv').config()
+import "dotenv/config.js";
+//require('dotenv').config()
 
 const token = process.env.BOT_TOKEN
 
