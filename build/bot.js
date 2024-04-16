@@ -19,5 +19,5 @@ bot.on("message", async (ctx) => {
 // export const config = {
 //     runtime: "edge",
 // };
-exports.default = (0, grammy_1.webhookCallback)(bot, "std/http");
-// bot.start();
+// export default webhookCallback(bot, "std/http");
+bot.start();
