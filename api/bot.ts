@@ -28,9 +28,9 @@ bot.on("message", async (ctx) => {
 });
 
 
-export const config = {
-    runtime: "edge",
-};
+// export const config = {
+//     runtime: "edge",
+// };
 export default webhookCallback(bot, "std/http");
     
 // bot.start();

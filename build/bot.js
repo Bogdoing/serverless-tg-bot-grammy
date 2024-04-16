@@ -1,6 +1,5 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.config = void 0;
 const grammy_1 = require("grammy");
 require('dotenv').config();
 const token = process.env.BOT_TOKEN;
@@ -23,9 +22,9 @@ bot.on("message", async (ctx) => {
     const message = ctx.message;
     ctx.reply((message === null || message === void 0 ? void 0 : message.text) + '');
 });
-exports.config = {
-    runtime: "edge",
-};
+// export const config = {
+//     runtime: "edge",
+// };
 exports.default = (0, grammy_1.webhookCallback)(bot, "std/http");
 // bot.start();
 // export default bot
