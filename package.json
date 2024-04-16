@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "start": "node api/bot.ts",
+    "start": "node build/bot.js",
     "dev": "nodemon api/bot.ts",
     "build": "tsc",
     "typecheck": "tsc --noEmit"

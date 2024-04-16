@@ -8,11 +8,22 @@ if (!token) throw new Error("BOT_TOKEN is unset");
 
 const bot = new Bot(token);
 
-bot.on("message", (ctx) => ctx.reply("Got another message!"));
-// console.log('start bot')
+bot.command("start", async (ctx) => {
+    ctx.reply("Got another message! /start")
+});
+
+bot.command("test", async (ctx) => {
+    ctx.reply("Got another message! /test")
+});
+
+bot.on("message", (ctx) => {
+    const message = ctx.message; // the message object
+    ctx.reply(message?.text + '')
+});
+
 bot.start();
 
-export const config = {
-    runtime: "edge",
-};
+// export const config = {
+//     runtime: "edge",
+// };
 export default webhookCallback(bot, "std/http");
