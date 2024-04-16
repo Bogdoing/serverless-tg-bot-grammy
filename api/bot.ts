@@ -10,7 +10,7 @@ const bot = new Bot(token);
 
 bot.on("message", (ctx) => ctx.reply("Got another message!"));
 // console.log('start bot')
-// bot.start();
+bot.start();
 
 export const config = {
     runtime: "edge",
