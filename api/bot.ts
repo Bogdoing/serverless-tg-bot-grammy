@@ -6,7 +6,13 @@ const token = process.env.BOT_TOKEN;
 
 if (!token) throw new Error("BOT_TOKEN is unset");
 
-const bot = new Bot(token);
+// const bot = new Bot(token);
+const bot = new Bot(token, {
+    client: {
+      // We accept the drawback of webhook replies for typing status.
+      canUseWebhookReply: (method) => method === "start",
+    },
+  });
 
 bot.command("start", async (ctx) => {
     ctx.reply("Got another message! /start")
