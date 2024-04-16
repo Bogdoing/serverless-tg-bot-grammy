@@ -28,3 +28,5 @@ bot.on("message", async (ctx) => {
 // export default webhookCallback(bot, "std/http");
     
 bot.start();
+
+export default bot
