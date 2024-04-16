@@ -1,14 +1,7 @@
 {
   "compilerOptions": {
-    "target": "ES2019",
-    "module": "commonjs",
-    "rootDir": "./api",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "outDir": "./build",
-    "allowSyntheticDefaultImports": true,
-    "esModuleInterop": true,
-    "strict": true,
-    "skipLibCheck": true
+      "newLine": "lf",
+      "target": "ESNext",
+      "moduleResolution": "NodeNext"
   }
 }

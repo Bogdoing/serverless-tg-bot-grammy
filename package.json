@@ -2,6 +2,7 @@
   "scripts": {
     "start": "node build/bot.js",
     "dev": "nodemon api/bot.ts",
+    "test": "nodemon api/webhook.ts",
     "build": "tsc",
     "typecheck": "tsc --noEmit"
   },
